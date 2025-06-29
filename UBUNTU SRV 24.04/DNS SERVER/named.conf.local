@@ -1,0 +1,18 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "slay.net" IN {
+	type master;
+	file "/etc/bind/f.slay.net";
+	allow-update {  none; };
+};
+zone "10.10.10.in-addr.arpa" IN {
+	type master;
+	file "/etc/bind/r.slay.net";
+	allow-update {  none; };
+};
